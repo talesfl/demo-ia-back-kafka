@@ -16,8 +16,7 @@ spring:
   kafka:
     client-id: kafka-api-producer
     producer:
-      bootstrap-servers: 
-       - localhost:9092
+      bootstrap-servers: localhost:9092
       
       
   session:
