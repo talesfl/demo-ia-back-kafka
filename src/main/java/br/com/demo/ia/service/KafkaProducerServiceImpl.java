@@ -37,12 +37,12 @@ class KafkaProducerServiceImpl implements KafkaProducerService {
 	}
 
 	@Override
-	public void dispatchAdminEmail(Email email) { dispatch(email, routingKeyAdmin); }
+	public void dispatchAdminEmail(Email email) { dispatchMessage(email, routingKeyAdmin); }
 
 	@Override
-	public void dispatchUserEmail(Email email) { dispatch(email, routingKey); }
+	public void dispatchUserEmail(Email email) { dispatchMessage(email, routingKey); }
 	
-	private void dispatch(Email email, String routingKey) {
+	private void dispatchMessage(Email email, String routingKey) {
 		String data = "";
 		
 		try {
