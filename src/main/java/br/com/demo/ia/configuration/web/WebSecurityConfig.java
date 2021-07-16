@@ -41,6 +41,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.anyRequest()
 				.authenticated()
 			.and()
+			.formLogin()
+				.disable()
 			.httpBasic()
 				.realmName(realm);
 	}
